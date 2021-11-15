@@ -1,6 +1,6 @@
 import express from "express";
 const router = express.Router();
-import { registerController, loginController, userController, productController, cartController, orderController } from '../controller';
+import { registerController, loginController, userController, productController, cartController, orderController, stripeController } from '../controller';
 import { verifyTokenAndAuthorization, verifyTokenAndAdmin, verifyToken } from "../middleware/verifyToken";
 
 router.post("/register", registerController.register);
@@ -23,9 +23,12 @@ router.post("/cart/:userId", verifyTokenAndAuthorization, cartController.getUser
 router.get("/cart", verifyTokenAndAdmin, cartController.getAllCart);
 
 router.post("/order", verifyToken, orderController.addOrder);
-router.post("/cart/:id", verifyTokenAndAdmin, orderController.updateOrder);
-router.post("/cart/:userId", verifyTokenAndAdmin, orderController.getUserOrder);
-router.get("/cart", verifyTokenAndAuthorization, orderController.getAllOrders);
+router.post("/order/:id", verifyTokenAndAdmin, orderController.updateOrder);
+router.post("/order/:userId", verifyTokenAndAdmin, orderController.getUserOrder);
+router.get("/order", verifyTokenAndAuthorization, orderController.getAllOrders);
+router.get("/order/income", verifyTokenAndAdmin, orderController.getAllIncome);
+
+router.post("/payment",stripeController.stripePay);
 
 
 export default router;
