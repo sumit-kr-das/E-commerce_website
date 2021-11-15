@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from "styled-components";
 import { popularProducts } from '../raw/data';
 import Product from "./Product";

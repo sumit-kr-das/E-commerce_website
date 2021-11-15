@@ -1,3 +1,4 @@
+import React from 'react';
 import styled from "styled-components";
 import AddShoppingCartOutlinedIcon from '@material-ui/icons/AddShoppingCartOutlined';
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';

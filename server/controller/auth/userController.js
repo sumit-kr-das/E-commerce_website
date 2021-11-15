@@ -54,7 +54,7 @@ const userController = {
       const users = query
         ? await User.find().sort({ _id: -1 }).limit(5)
         : await User.find();
-      console.log("no data", users);
+
       res.status(200).json(users);
     } catch (err) {
       res.status(500).json(err.message);
