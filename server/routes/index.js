@@ -15,7 +15,7 @@ router.post("/product", verifyTokenAndAdmin, productController.addProduct);
 router.put("/product/:id", verifyTokenAndAdmin, productController.updateProduct);
 router.delete("/product/:id", verifyTokenAndAdmin, productController.deleteProduct);
 router.get("/product/find/:id", productController.getProduct);
-router.get("/product", productController.getAllProducts);
+router.get("/products", productController.getAllProducts);
 
 router.post("/cart", verifyToken, cartController.addProduct);
 router.post("/cart/:id", verifyTokenAndAuthorization, cartController.updateProduct);

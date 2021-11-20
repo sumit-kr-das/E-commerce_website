@@ -1,0 +1,211 @@
+[{
+  "_id": {
+    "$oid": "619883f5656527290686e258"
+  },
+  "title": "Puma T-Shirt",
+  "desc": "Shop from a wide range of T-Shirt from Scott International. Perfect for your everyday use, you could pair it with a stylish pair of Jeans or Trousers complete the look.",
+  "img": "https://demo.xpeedstudio.com/marketov2/wp-content/uploads/2018/05/26-1.png",
+  "categories": [
+    "shirt",
+    "T-Shirt"
+  ],
+  "size": [
+    "xl",
+    "xxl",
+    "l"
+  ],
+  "color": [
+    "red",
+    "green",
+    "blue"
+  ],
+  "price": "55",
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-11-20T05:13:25.733Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-20T05:13:25.733Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61988497656527290686e25a"
+  },
+  "title": "Scott International Men's",
+  "desc": "Shop from a wide range of T-Shirt from Scott International. Perfect for your everyday use, you could pair it with a stylish pair of Jeans or Trousers complete the look.",
+  "img": "https://demo.xpeedstudio.com/marketov2/wp-content/uploads/2018/05/27-1.png",
+  "categories": [
+    "shirt",
+    "T-Shirt"
+  ],
+  "size": [
+    "xl",
+    "xxl",
+    "l"
+  ],
+  "color": [
+    "red",
+    "green",
+    "yellow"
+  ],
+  "price": "24",
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-11-20T05:16:07.406Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-20T05:16:07.406Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61988508656527290686e25c"
+  },
+  "title": "AWG ALL WEATHER",
+  "desc": "Shop from a wide range of T-Shirt from Scott International. Perfect for your everyday use, you could pair it with a stylish pair of Jeans or Trousers complete the look.",
+  "img": "https://demo.xpeedstudio.com/marketov2/wp-content/uploads/2018/05/30-1.png",
+  "categories": [
+    "shirt",
+    "T-Shirt"
+  ],
+  "size": [
+    "xl",
+    "xxxl",
+    "l"
+  ],
+  "color": [
+    "red",
+    "gray",
+    "yellow"
+  ],
+  "price": "25",
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-11-20T05:18:00.858Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-20T05:18:00.858Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61988554656527290686e25e"
+  },
+  "title": "ADRO Men's Regular Fit",
+  "desc": "Shop from a wide range of T-Shirt from Scott International. Perfect for your everyday use, you could pair it with a stylish pair of Jeans or Trousers complete the look.",
+  "img": "https://demo.xpeedstudio.com/marketov2/wp-content/uploads/2018/05/31-1.png",
+  "categories": [
+    "shirt",
+    "T-Shirt"
+  ],
+  "size": [
+    "xl",
+    "xxxl",
+    "l"
+  ],
+  "color": [
+    "green",
+    "gray",
+    "yellow"
+  ],
+  "price": "85",
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-11-20T05:19:16.276Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-20T05:19:16.276Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "61988588656527290686e260"
+  },
+  "title": "Qube By Fort Collins",
+  "desc": "Shop from a wide range of T-Shirt from Scott International. Perfect for your everyday use, you could pair it with a stylish pair of Jeans or Trousers complete the look.",
+  "img": "https://demo.xpeedstudio.com/marketov2/wp-content/uploads/2018/05/38-1-1.png",
+  "categories": [
+    "shirt",
+    "T-Shirt"
+  ],
+  "size": [
+    "xl",
+    "xxxl",
+    "l"
+  ],
+  "color": [
+    "green",
+    "gray",
+    "yellow"
+  ],
+  "price": "99",
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-11-20T05:20:08.816Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-20T05:20:08.816Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "619885ed656527290686e262"
+  },
+  "title": "Kidbee Baby Boy's Cotton",
+  "desc": "Shop from a wide range of T-Shirt from Scott International. Perfect for your everyday use, you could pair it with a stylish pair of Jeans or Trousers complete the look.",
+  "img": "https://demo.xpeedstudio.com/marketov2/wp-content/uploads/2018/05/34-1-1.png",
+  "categories": [
+    "shirt",
+    "T-Shirt"
+  ],
+  "size": [
+    "xl",
+    "xxxl",
+    "l"
+  ],
+  "color": [
+    "green",
+    "gray",
+    "yellow"
+  ],
+  "price": "47",
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-11-20T05:21:49.753Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-20T05:21:49.753Z"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "619886286ce2e907ec00739a"
+  },
+  "title": "MINITATU Unisex-Child",
+  "desc": "Shop from a wide range of T-Shirt from Scott International. Perfect for your everyday use, you could pair it with a stylish pair of Jeans or Trousers complete the look.",
+  "img": "https://demo.xpeedstudio.com/marketov2/wp-content/uploads/2018/05/37-1-1.pngn",
+  "categories": [
+    "shirt",
+    "T-Shirt"
+  ],
+  "size": [
+    "xl",
+    "xxxl",
+    "l"
+  ],
+  "color": [
+    "green",
+    "gray",
+    "yellow"
+  ],
+  "price": "45",
+  "inStock": true,
+  "createdAt": {
+    "$date": "2021-11-20T05:22:48.514Z"
+  },
+  "updatedAt": {
+    "$date": "2021-11-20T05:22:48.514Z"
+  },
+  "__v": 0
+}]

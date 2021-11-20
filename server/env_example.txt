@@ -1,0 +1,5 @@
+PORT = 8000
+DB_CONNECT = mongodb://localhost:27017/user
+PASSWORD_SECRET = passwordsecret
+JWT_SECRET = jwtsecretkrydontcopyme
+STRIPE_KEY = sk_test_51Jw1pwSJm4C0H9ZzCI2nCLQ1bXV9lYNqqx9XceYEPZMJLrz79pD5nQ3VAH8axQnhel996Yuw03nkfxODnnSjSJ8n007OSAMN9o
