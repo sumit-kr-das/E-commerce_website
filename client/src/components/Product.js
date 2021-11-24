@@ -3,6 +3,8 @@ import styled from "styled-components";
 import AddShoppingCartOutlinedIcon from '@material-ui/icons/AddShoppingCartOutlined';
 import SearchOutlinedIcon from '@material-ui/icons/SearchOutlined';
 import FavoriteBorderOutlinedIcon from '@material-ui/icons/FavoriteBorderOutlined';
+import { Link } from 'react-router-dom';
+import { ListItem } from '@material-ui/core';
 
 const Info = styled.div`
     width: 100%;
@@ -63,7 +65,7 @@ const Icon = styled.div`
     }
 `;
 
-const Product = ({ img }) =>{
+const Product = ({ img,key }) =>{
     return(
         <Container>
             <Image src={img} />
@@ -73,7 +75,9 @@ const Product = ({ img }) =>{
                     <AddShoppingCartOutlinedIcon />
                 </Icon>
                 <Icon>
-                    <SearchOutlinedIcon />
+                    <Link to={`/product/${key}`}>
+                        <SearchOutlinedIcon />
+                    </Link>
                 </Icon>
                 <Icon>
                     <FavoriteBorderOutlinedIcon />

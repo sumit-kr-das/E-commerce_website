@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from "styled-components";
 import Announcement from '../components/Announcement';
 import Navbar from '../components/Navbar';
@@ -6,9 +6,12 @@ import NewsLetter from '../components/NewsLetter';
 import Footer from '../components/Footer';
 import AddIcon from '@material-ui/icons/Add';
 import RemoveIcon from '@material-ui/icons/Remove';
+import { useLocation } from 'react-router';
+import axios from 'axios';
+import { publicRequest } from '../requestMethood';
+
 
 const Container = styled.div`
-
 `;
 const Title = styled.h1`
     font-weight: 200;
@@ -100,13 +103,28 @@ const Button= styled.button`
 
 
 const Product = () =>{
+    const location = useLocation();
+    const id = location.pathname.split("/")[2];
+    const [product, setProduct] = useState([])
+    useEffect(()=>{
+        const getProduct = async() =>{
+            try{    
+                const res = await axios.get("/products/find/"+id);
+                setProduct("data is",res.data);
+                console.log(res)
+            }catch(err){
+                console.log(err.message);
+            }
+        }
+        getProduct();
+    },[id]);
     return(
         <Container>
             <Announcement />
             <Navbar />
                 <Wrapper>
                     <ImageContainer>
-                        <Image src="https://d3o2e4jr3mxnm3.cloudfront.net/Mens-Jake-Guitar-Vintage-Crusher-Tee_68382_1_lg.png" />
+                        <Image src={product.img} />
                     </ImageContainer>
                     <InfoContainer>
                         <Title>This is the Title</Title>
