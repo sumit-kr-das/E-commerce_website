@@ -13,21 +13,22 @@ const Container = styled.div`
 const Products = ({ cat, filters, sort }) => {
   const [products, setProducts] = useState([]);
   const [filterProducts, setFilterProducts] = useState([]);
+
   useEffect(() => {
     const getProducts = async () => {
       try {
-        // get all product query
+        // get all from product query
         const res = await axios.get(
-          cat ? `/api/products?category=${cat} ` : "/api/products"
+          cat ? `http://localhost:8000/api/products?category=${cat} ` : "http://localhost:8000/api/products"
         );
         setProducts(res.data);
-        console.log(res.data);
       } catch (err) {
         console.log(err.message);
       }
     };
     getProducts();
   }, [cat]);
+
   useEffect(() => {
     cat &&
       setFilterProducts(
@@ -53,13 +54,13 @@ const Products = ({ cat, filters, sort }) => {
 
   return (
     <Container>
-      {
-        cat 
+      {cat
         ? filterProducts.map((item) => (
-            <Product key={item._id} img={item.img} />
+            <Product product={item} key={item.id} />
           ))
-        : products.slice(0, 8).map((item) => <Product key={item._id} img={item.img} />)
-      }
+        : products
+            .slice(0, 8)
+            .map((item) => <Product product={item} key={item.id} />)}
     </Container>
   );
 };
