@@ -28,7 +28,7 @@ router.post("/order/:userId", verifyTokenAndAdmin, orderController.getUserOrder)
 router.get("/order", verifyTokenAndAuthorization, orderController.getAllOrders);
 router.get("/order/income", verifyTokenAndAdmin, orderController.getAllIncome);
 
-router.post("/payment",stripeController.stripePay);
+router.post("/checkout/payment",stripeController.stripePay);
 
 
 export default router;

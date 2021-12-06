@@ -1,7 +1,8 @@
 import { STRIPE_KEY } from "../../config";
-import Stripe from 'stripe';
-const stripe = new Stripe(STRIPE_KEY);
-
+import Stripe from "stripe";
+const stripe = new Stripe(
+  "sk_test_51Jw1pwSJm4C0H9ZzCI2nCLQ1bXV9lYNqqx9XceYEPZMJLrz79pD5nQ3VAH8axQnhel996Yuw03nkfxODnnSjSJ8n007OSAMN9o"
+);
 
 const stripeController = {
   stripePay(req, res) {
@@ -9,7 +10,8 @@ const stripeController = {
       {
         source: req.body.tokenId,
         amount: req.body.amount,
-        currency: "usd",
+        currency: "inr",
+        description: 'Easy Online Store'
       },
       (stripeErr, stripeRes) => {
         if (stripeErr) {

@@ -6,6 +6,7 @@ import Product from "./pages/Product";
 import Register from "./pages/Register";
 import Login from './pages/Login'
 import Cart from './pages/Cart';
+import Success from './pages/Success';
 
 function App() {
   const user = true;
@@ -19,6 +20,7 @@ function App() {
           <Route path="/cart" element={<Cart />} exact/>
           <Route path="/login" element={user ? <Navigate to="/" /> : <Login />} exact/>
           <Route path="/register" element={user ? <Navigate to="/" />: <Register />} exact/>
+          <Route path="/success" element={<Success />} exact />x`x`
         </Routes>
       </Router>
     </>
