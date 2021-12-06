@@ -11,7 +11,6 @@ const userController = {
         PASSWORD_SECRET
       ).toString();
     }
-
     try {
       const updatedUser = await User.findByIdAndUpdate(
         req.params.id,
