@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from "react";
 import styled from "styled-components";
+import { login } from "../redux/apiCalls";
+import { useDispatch, useSelector } from "react-redux";
 
 const Container = styled.div`
   background-color: #ebf5fb;
@@ -41,18 +43,46 @@ const Button = styled.button`
   color: #fff;
   font-weight: bold;
   margin-top: 10px;
+  &:disabled {
+    color: green;
+    cursor: not-allowed;
+  }
 `;
 
 const Login = () => {
+  const [user, setUser] = useState({ username: "", password: "" });
+  const dispatch = useDispatch();
+  const { isFetching, error } = useSelector((state) => state.user);
+
+  const getData = (e) => {
+    setUser({ ...user, [e.target.name]: e.target.value });
+  };
+
+  const handleClick = (e) => {
+    login(dispatch, user);
+    console.log(user);
+  };
   return (
     <Container>
       <Wrapper>
         <Title>SIGN IN</Title>
         <Form>
-          <Input placeholder="username" />
-          <Input placeholder="password" />
+          <Input
+            placeholder="username"
+            name="username"
+            value={user.username}
+            onChange={getData}
+          />
+          <Input
+            placeholder="password"
+            name="password"
+            value={user.password}
+            onChange={getData}
+          />
         </Form>
-        <Button>LOGIN</Button>
+        <Button onClick={handleClick} disabled={isFetching}>
+          LOGIN
+        </Button>
         <Link>DO NOT YOU REMEMBER THE PASSWORD ?</Link>
         <Link>CREATE A NEW ACCOUNT</Link>
       </Wrapper>

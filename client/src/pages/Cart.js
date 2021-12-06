@@ -159,9 +159,7 @@ const Cart = () => {
   const onToken = (token) => {
     setStripeToken(token);
   };
-  if(stripeToken != null){
-  console.log("token is",stripeToken.id);
-  }
+
   useEffect(() => {
     const makeRequest = async () => {
       try {
@@ -180,7 +178,7 @@ const Cart = () => {
     stripeToken && makeRequest();
   }, [stripeToken, cart.total, navigate]);
 
-  console.log("cart total",cart.total);
+  // console.log("cart total",cart.total);
   return (
     <Container>
       <Navbar />
