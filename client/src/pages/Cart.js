@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { userRequest } from "../requestMethood";
 import { Add, Remove } from "@material-ui/icons";
 import styled from "styled-components";
 import Announcement from "../components/Announcement";
@@ -152,12 +154,33 @@ const Cart = () => {
   const cart = useSelector((state) => state.cart);
 
   const [stripeToken, setStripeToken] = useState(null);
-  // const history = useHistory();
+  const navigate = useNavigate();
 
   const onToken = (token) => {
     setStripeToken(token);
   };
-  console.log(stripeToken);
+  if(stripeToken != null){
+  console.log("token is",stripeToken.id);
+  }
+  useEffect(() => {
+    const makeRequest = async () => {
+      try {
+        const res = await userRequest.post("/checkout/payment", {
+          tokenId: stripeToken.id,
+          amount: cart.total*100,
+        });
+        navigate("/success", {
+          stripeData: res.data,
+          products: cart,
+        });
+      } catch (err) {
+        console.log("stripe frontend err", err.message);
+      }
+    };
+    stripeToken && makeRequest();
+  }, [stripeToken, cart.total, navigate]);
+
+  console.log("cart total",cart.total);
   return (
     <Container>
       <Navbar />
