@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { login } from "../redux/apiCalls";
 import { useDispatch, useSelector } from "react-redux";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Container = styled.div`
   background-color: #ebf5fb;
@@ -60,10 +62,13 @@ const Login = () => {
 
   const handleClick = (e) => {
     login(dispatch, user);
-    console.log(user);
+    if (error || user.username === "" || user.password === "") {
+      toast("Something want wrong...");
+    }
   };
   return (
     <Container>
+      <ToastContainer />
       <Wrapper>
         <Title>SIGN IN</Title>
         <Form>
